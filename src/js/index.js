@@ -28,7 +28,10 @@ API.fetchBreeds()
     refs.loader.classList.add('visually-hidden');
     refs.select.insertAdjacentHTML('beforeend', marc.createMarcupSelect(data));
   })
-  .catch(() => Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!'));
+  .catch(() => {
+    refs.select.classList.add('visually-hidden');
+    Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
+  });
 
 refs.select.addEventListener('change', onChange);
 
