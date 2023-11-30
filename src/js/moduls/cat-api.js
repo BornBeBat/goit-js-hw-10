@@ -12,14 +12,16 @@ export default class ApiServise {
   constructor() {}
 
   fetchBreeds() {
-    return fetch(`${baseUrl}/breeds`, options).then(resolve => {
-      return resolve.json();
+    return fetch(`${baseUrl}/breeds`, options).then(response => {
+      if (response.ok) return response.json();
+      throw new Error();
     });
   }
 
   fetchCatByBreed(breedId) {
-    return fetch(`${baseUrl}/images/search?breed_ids=${breedId}`, options).then(resolve => {
-      return resolve.json();
+    return fetch(`${baseUrl}/images/search?breed_ids=${breedId}`, options).then(response => {
+      if (response.ok) return response.json();
+      throw new Error();
     });
   }
 }
