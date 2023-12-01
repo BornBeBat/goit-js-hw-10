@@ -27,13 +27,12 @@ API.fetchBreeds()
     refs.select.classList.remove('visually-hidden');
     refs.loader.classList.add('visually-hidden');
     refs.select.insertAdjacentHTML('beforeend', marc.createMarcupSelect(data));
+    refs.select.addEventListener('change', onChange);
   })
   .catch(() => {
     refs.select.classList.add('visually-hidden');
     Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
   });
-
-refs.select.addEventListener('change', onChange);
 
 function onChange(event) {
   refs.loader.classList.remove('visually-hidden');
