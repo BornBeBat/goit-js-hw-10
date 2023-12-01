@@ -1,8 +1,8 @@
 /* =====================================================
 =============IMPORTS
 ========================================================*/
-import ApiServise from './moduls/cat-api';
-import Marcup from './moduls/marcup';
+import ApiServise from './moduls/cat-api.js';
+import Marcup from './moduls/marcup.js';
 import Notiflix from 'notiflix';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
 /* =====================================================

@@ -1,7 +1,7 @@
 /* =====================================================
 =============Class for work with marcup
 ========================================================*/
-export default class Marcup {
+class Marcup {
   constructor() {}
 
   createMarcupOneRow({ name, id }) {
@@ -22,3 +22,4 @@ export default class Marcup {
       </div>`;
   }
 }
+export default Marcup;

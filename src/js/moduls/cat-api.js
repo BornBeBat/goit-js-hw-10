@@ -8,7 +8,7 @@ const baseUrl = 'https://api.thecatapi.com/v1';
 /* =====================================================
 =============Class for work with API Servises
 ========================================================*/
-export default class ApiServise {
+class ApiServise {
   constructor() {}
 
   fetchBreeds() {
@@ -25,3 +25,4 @@ export default class ApiServise {
     });
   }
 }
+export default ApiServise;
